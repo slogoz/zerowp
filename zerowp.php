@@ -61,31 +61,6 @@ run_zerowp();
  * Тест
  *
 
-$zero_robot = new Zero_Robot;
-$zero_robot->add_obj(['type' => 'file', 'file' => __FILE__, 'notice' => 'file: %file%']);
-
-$zero_robot->notice_type = 'zerowp_class_autoload';
-// $zero_robot->notice_type = 'file';
-add_action( 'admin_notices', [ $zero_robot, 'notice' ] );
-add_action( 'admin_notices', function() {
-    global $zerowp_include_classes;
-    $text_classes = implode(PHP_EOL, $zerowp_include_classes);
-    echo "<p><pre>{$text_classes}</pre></p>";
-} );
-
-
-
-/**
- * Тест Zero_Block
- */
-// $zero_block_test = new Zero_Block('info');
-// $zero_block_err = new Zero_Block('err');
-
-// add_action( 'admin_notices', [ $zero_block_test, 'show' ] );
-// add_action( 'admin_notices', [ $zero_block_err, 'show' ] );
-
-
-
 /**
  * Тест Zero_DIContainer
  */
