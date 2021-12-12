@@ -5,7 +5,7 @@
  * Plugin URI:  zerowp.ru
  * Author URI:  zerowp.ru/Author/ZeroRobot
  * Author:      ZeroRobot
- * Version:     0.0.1
+ * Version:     1.0.0
  */
 
 defined( 'ABSPATH' ) || exit;
