@@ -1,0 +1,2 @@
+# zerowp
+Плагин для Wordpress
