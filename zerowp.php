@@ -56,11 +56,6 @@ run_zerowp();
 
 
 
-
-/**
- * Тест
- *
-
 /**
  * Тест Zero_DIContainer
  */
