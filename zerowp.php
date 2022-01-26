@@ -14,9 +14,14 @@ if ( ! defined( 'ZWP_PLUGIN_FILE' ) ) {
     define( 'ZWP_PLUGIN_FILE', __FILE__ );
 }
 
+define('ZWP_DIR', dirname(__FILE__));
+define('ZWP_BASE', plugin_basename(__FILE__));
+define('ZWP_URL', plugins_url(null, __FILE__));
+
 // Версия плагина ZeroWP
 define( 'ZWP_VERSION', '1.0.0' );
 
+require_once ZWP_DIR . '/inc/functions.php';
 
 
 // Функция активации плагина ZeroWP
@@ -46,7 +51,7 @@ function zerowp_autoload_classes($class) {
 
 spl_autoload_register('zerowp_autoload_classes');
 
-
+//require_once ZWP_DIR . '/inc/submenu.php';
 
 // Запуск плагина
 function run_zerowp() {
@@ -67,3 +72,16 @@ $zdic_test = new Zero_DIContainer();
 $zero_block_dic = $zdic_test->get('Zero_Block');
 
 // add_action( 'admin_notices', [ $zero_block_dic, 'show' ] );
+
+/**
+ * Тест монитор
+ */
+//z_mon('Тест: ZeroWP Monitor');
+add_action('wp_footer', 'zerowp_monitor');
+
+add_filter('document_title', function($title) {
+
+//    $title = "[[ Тест хука-фильтра 'document_title' ]]";
+
+    return $title;
+});

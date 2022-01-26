@@ -5,3 +5,9 @@
 h1 {
     text-shadow: 0 0 5px limegreen;
 }
+
+/* Test Browser Sync */
+body,
+.page {
+    /*background-color: red;*/
+}
