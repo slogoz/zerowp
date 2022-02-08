@@ -21,6 +21,7 @@ define('ZWP_URL', plugins_url(null, __FILE__));
 // Версия плагина ZeroWP
 define( 'ZWP_VERSION', '1.0.0' );
 
+require_once ZWP_DIR . '/inc/helper-functions.php';
 require_once ZWP_DIR . '/inc/functions.php';
 
 
