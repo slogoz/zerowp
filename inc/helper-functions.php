@@ -44,3 +44,17 @@ if ( ! function_exists( 'date_create_from_format' ) ) {
     }
 }// End if.
 
+
+if ( ! function_exists( 'redirect_trailingslash' ) ) {
+    function redirect_trailingslash($status = 302)
+    {
+        $this_url = home_url($_SERVER['REQUEST_URI']);
+        vd_add($this_url);
+        $new_url = user_trailingslashit($this_url);
+        vd_add($new_url);
+        if($this_url <> $new_url) {
+            wp_redirect($new_url, $status);
+            exit;
+        }
+    }
+}// End if.
